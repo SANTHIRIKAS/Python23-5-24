@@ -1,0 +1,12 @@
+import math
+
+def main():
+    numbers = input("Enter numbers separated by spaces: ").split()
+    numbers = [float(num) for num in numbers]
+    n = len(numbers)
+    mean = sum(numbers) / n
+    variance = sum((x - mean) ** 2 for x in numbers) / n
+    deviation = math.sqrt(variance)
+    print(f"Mean: {mean}")
+    print(f"Variance: {variance}")
+    print(f"Standard Deviation: {deviation}")
