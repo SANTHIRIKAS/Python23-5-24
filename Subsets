@@ -1,0 +1,8 @@
+def count_subsets(arr):
+    # The number of subsets of a set with n elements is 2^n
+    n = len(arr)
+    total_subsets = 2 ** n
+    return total_subsets
+arr = [1, 2, 3]
+result = count_subsets(arr)
+print(f"Total number of subsets: {result}")
