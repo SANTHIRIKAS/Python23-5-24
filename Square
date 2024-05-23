@@ -1,0 +1,24 @@
+import math
+
+def is_perfect_square(num):
+    if num < 0:
+        return False
+    sqrt_num = int(math.sqrt(num))
+    return sqrt_num * sqrt_num == num
+
+def largest_non_perfect_square(numbers):
+    largest = -1
+    for num in numbers:
+        if not is_perfect_square(num):
+            if num > largest:
+                largest = num
+    return largest
+n = int(input("Enter the number of integers: "))
+numbers = []
+
+print("Enter the integers:")
+for _ in range(n):
+    numbers.append(int(input()))
+
+result = largest_non_perfect_square(numbers)
+print(result)
