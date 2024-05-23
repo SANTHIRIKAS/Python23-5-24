@@ -1,0 +1,18 @@
+def product_of_max_and_min(arr1, arr2):
+    if not arr1 or not arr2:
+        print("One or both arrays are empty.")
+        return
+    
+    max_element = max(arr1)
+    min_element = min(arr2)
+    
+    product = max_element * min_element
+    
+    print(f"The maximum element in the first array is {max_element}.")
+    print(f"The minimum element in the second array is {min_element}.")
+    print(f"The product of the maximum element of the first array and the minimum element of the second array is {product}.")
+
+arr1 = [1, 5, 3, 9, 7]
+arr2 = [4, 2, 8, 6, 1]
+
+product_of_max_and_min(arr1, arr2)
