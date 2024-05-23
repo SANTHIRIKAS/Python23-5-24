@@ -1,0 +1,11 @@
+def main():
+    elements = input("Enter the elements of the array separated by spaces: ")
+    array = elements.split()
+    search_element = input("Enter the element to search for: ")
+    if search_element in array:
+        position = array.index(search_element) + 1 
+        print(f"Element '{search_element}' found at position {position}.")
+    else:
+        print(f"Element '{search_element}' not found in the array.")
+if __name__ == "__main__":
+    main()
