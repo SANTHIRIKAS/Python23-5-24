@@ -1,0 +1,14 @@
+def main():
+    numbers = input("Enter numbers separated by spaces: 
+    numbers = [int(num) for num in numbers]
+    print("Initial array:", numbers)
+    insert_num = int(input("Enter the number to insert: "))
+    insert_pos = int(input("Enter the position to insert the number at (1-based index): ")) - 1
+    numbers.insert(insert_pos, insert_num)
+    print("Array after insertion:", numbers)
+    delete_pos = int(input("Enter the position to delete the number from (1-based index): ")) - 1
+    if 0 <= delete_pos < len(numbers):
+        numbers.pop(delete_pos)
+        print("Array after deletion:", numbers)
+    else:
+        print("Invalid position for deletion.")
