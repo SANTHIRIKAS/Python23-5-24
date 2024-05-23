@@ -1,0 +1,9 @@
+def main():
+    numbers = input("Enter numbers separated by spaces: ").split()
+    numbers = [int(num) for num in numbers]
+    largest = max(numbers)
+    smallest = min(numbers)
+    print(f"The largest number is: {largest}")
+    print(f"The smallest number is: {smallest}")
+if __name__ == "__main__":
+    main()
