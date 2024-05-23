@@ -1,0 +1,16 @@
+def find_repetitive_element(arr):
+    # Calculate the sum of the first (n-1) natural numbers
+    n = len(arr)
+    expected_sum = (n - 1) * n // 2
+
+    # Calculate the actual sum of elements in the array
+    actual_sum = sum(arr)
+
+    # The repetitive element is the difference between the expected sum and the actual sum
+    repetitive_element = actual_sum - expected_sum
+    return repetitive_element
+
+def main():
+    arr = list(map(int, input("Enter the array elements separated by spaces: ").split()))
+    repetitive_element = find_repetitive_element(arr)
+    print("The repetitive element is:", repetitive_element)
