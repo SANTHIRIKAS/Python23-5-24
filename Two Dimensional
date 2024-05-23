@@ -1,0 +1,22 @@
+def are_arrays_equal(array1, array2):
+    # Check if the lengths of the arrays are equal
+    if len(array1) != len(array2):
+        return False
+
+    # Check element-wise equality
+    for i in range(len(array1)):
+        if array1[i] != array2[i]:
+            return False
+
+    return True
+
+def main():
+    array1 = input("Enter elements of the first array separated by spaces: ").split()
+
+    array2 = input("Enter elements of the second array separated by spaces: ").split()
+    array1 = [int(num) for num in array1]
+    array2 = [int(num) for num in array2]
+    if are_arrays_equal(array1, array2):
+        print("The arrays are the same.")
+    else:
+        print("The arrays are different.")
