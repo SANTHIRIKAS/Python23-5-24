@@ -1,0 +1,8 @@
+def main():
+    elements = input("Enter the elements of the array separated by spaces: 
+    array = elements.split()
+    print("The elements in the array are:")
+    for element in array:
+        print(element)
+if __name__ == "__main__":
+    main()
